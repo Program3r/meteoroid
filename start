@@ -37,7 +37,7 @@ if [ $1 = "noob" ]
     
     /root/local/cloud9/bin/cloud9.sh -p 3131 -l 0.0.0.0 -w / > /dev/null &
     
-    export MONGO_URL=mongodb://localhost:27017/meteorite
+    export MONGO_URL=mongodb://admin:password@localhost:27017/meteorite
     
-    cd /root/local/meteoroid && mrt --port 8181 > /dev/null
+    cd /root/meteoroid && mrt --port 8181 > /dev/null
 fi

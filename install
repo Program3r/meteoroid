@@ -1,0 +1,4 @@
+echo "installing nvm"
+apt-get install curl
+curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+
