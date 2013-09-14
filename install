@@ -1,4 +1,19 @@
 echo "installing nvm"
 apt-get install curl
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
-
+source ~/.nvm/nvm.sh
+nvm install v0.8.19
+echo "installing meteor"
+curl https://install.meteor.com | /bin/sh
+echo "installing cloud 9"
+mkdir ~/local
+cd ~/local
+apt-get update
+apt-get install libxml2-dev
+git clone https://github.com/ajaxorg/cloud9.git
+cd cloud9
+npm install
+nvm alias default v0.8.19
+echo "installing meteorite"
+npm install -g meteorite
+~/meteorite/start
