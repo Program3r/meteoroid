@@ -14,7 +14,7 @@ apt-get install libxml2-dev
 . ~/.bashrc
 git clone https://github.com/ajaxorg/cloud9.git
 cd cloud9
-npm install
+~/.nvm/v0.8.19/bin/npm install
 nvm alias default v0.8.19
 echo "installing meteorite"
 ~/.nvm/v0.8.19/bin/npm install -g meteorite
