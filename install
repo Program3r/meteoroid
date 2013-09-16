@@ -11,11 +11,12 @@ mkdir ~/local
 cd ~/local
 apt-get update
 apt-get install libxml2-dev
-. ~/.bashrc
+apt-get -y install autoconf automake build-essential git
 git clone https://github.com/ajaxorg/cloud9.git
-cd cloud9
-~/.nvm/v0.8.19/bin/npm install
+cd ~/local/cloud9 && ~/.nvm/v0.8.19/bin/npm install
 nvm alias default v0.8.19
 echo "installing meteorite"
 ~/.nvm/v0.8.19/bin/npm install -g meteorite
 echo "Refresh your terminal, and run ~/meteoroid/start"
+. ~/.bashrc
+~/meteoroid/start
