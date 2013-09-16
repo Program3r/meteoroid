@@ -17,5 +17,5 @@ cd cloud9
 npm install
 nvm alias default v0.8.19
 echo "installing meteorite"
-npm install -g meteorite
+~/.nvm/v0.8.19/bin/npm install -g meteorite
 echo "Refresh your terminal, and run ~/meteoroid/start"
