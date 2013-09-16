@@ -16,4 +16,4 @@ npm install
 nvm alias default v0.8.19
 echo "installing meteorite"
 npm install -g meteorite
-~/meteorite/start
+echo "Refresh your terminal, and run ./start"
