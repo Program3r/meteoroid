@@ -6,19 +6,6 @@ echo "_|    _|  _|    _|  _|        _|  _|        _|        _|    _|  _|    _|"
 echo "_|    _|    _|_|_|    _|_|_|  _|    _|      _|_|_|_|    _|_|_|  _|_|_|"
 echo "                                                                      "
 
-
-	if [ $REPLY != "y" ]; then
-		echo "Exiting..."
-		exit 1
-	fi
-
-if [ $1 = "noob" ]
-  then
-    echo "Shell: http://${IP_LOCAL}:4200"
-    cd /root/local/shellinabox && ./shellinaboxd -t -q
-    echo "Log in, and run: cd /root/local/meteoroid/start"
-    
-  else
     IP_LOCAL=$(/sbin/ifconfig | sed -n '2 p' | awk '{print $2}' | cut -d':' -f 2)
     
     echo "Cloud9 IDE: http://${IP_LOCAL}:3131"
@@ -40,4 +27,3 @@ if [ $1 = "noob" ]
     export MONGO_URL=mongodb://admin:password@localhost:27017/meteoroid
     
     cd /root/meteoroid && mrt --port 8181 > /dev/null
-fi
